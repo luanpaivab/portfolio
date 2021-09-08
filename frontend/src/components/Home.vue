@@ -67,5 +67,6 @@ export default {
 <style>
  #inspire{
    min-height: 120vh;
+   background-color: rgba(243, 243, 243, 0.74);
  }
 </style>

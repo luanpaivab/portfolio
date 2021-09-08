@@ -1,7 +1,11 @@
 <template>
   <div class="informations">
     <div class="jumbo">
-      <b-avatar class="mx-3 my-3" src="https://media-exp1.licdn.com/dms/image/C4E03AQEJkpEEc9YJiA/profile-displayphoto-shrink_100_100/0/1629153607022?e=1636588800&v=beta&t=n1QFBHaoXcAbNR_focxUF7s6e65rQaViS9o5rAGlA0A" size="6rem"></b-avatar>
+      <b-avatar
+        class="mx-3 my-3"
+        src="https://media-exp1.licdn.com/dms/image/C4E03AQEJkpEEc9YJiA/profile-displayphoto-shrink_100_100/0/1629153607022?e=1636588800&v=beta&t=n1QFBHaoXcAbNR_focxUF7s6e65rQaViS9o5rAGlA0A"
+        size="6rem"
+      ></b-avatar>
       <div class="intro">
         <h1>Luan Paiva Barbosa</h1>
         <h3>Desenvolvedor Full Stack | Node.js | Vue.Js</h3>
@@ -15,25 +19,46 @@
     <div class="container my-5">
       <b-row>
         <b-col sm="6">
-          <div class="flex-container py-5">
-            <span class="title-span">Conhecimentos</span>
-            <b-col sm="12" class="main-card mt-2">
+          <div class="flex-container mt-5 py-5">
+            <span class="title-span pl-3">Conhecimentos</span>
+            <b-col sm="12" class="main-card mt-3 ml-3">
               <div
                 class="card-container mr-2 mb-2"
                 v-for="item in items"
                 :key="item.language"
               >
                 <div class="card-info py-1">
-                  <img alt="Js" :src="item.src" />
+                  <img alt="Js" :src="item.src" height="30" width="40"/>
                   <span class="display-flex px-1">{{ item.language }}</span>
                   <span class="time-span px-1">{{ item.time }}</span>
                 </div>
               </div>
             </b-col>
           </div>
+          <b-col sm="12">
+              <div class="flex-container mt-10 py-5 px-3">
+                <span class="title-span">Formação Academica</span>
+                <div class="info-experience py-3">
+                  <img
+                    class="mr-3"
+                    src="https://img.icons8.com/ios/2x/graduation-cap.png"
+                    alt=""
+                    height="60"
+                    width="60"
+                  />
+                  <div class="details-experience">
+                    <span style="font-weight: bold">Universidade Federal do Pará</span>
+                    <span>Engenharia da Computação</span>
+                    <span style="color: rgb(159, 159, 159)"
+                      >Outubro de 2016 - Fevereiro de 2022</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </b-col>
         </b-col>
         <b-col sm="6">
-          <Experiences/>
+          <Experiences />
         </b-col>
       </b-row>
     </div>
@@ -41,10 +66,10 @@
 </template>
 
 <script>
-import Experiences from "./Experiences.vue"
+import Experiences from "./Experiences.vue";
 export default {
   name: "Informations",
-  components:{ Experiences },
+  components: { Experiences },
   data() {
     return {
       items: [
@@ -91,7 +116,6 @@ export default {
       ],
     };
   },
-  
 };
 </script>
 
@@ -104,15 +128,14 @@ export default {
   /* width: 50%; */
   display: flex;
   /* justify-content: center; */
-   background: url('https://wallpaperaccess.com/full/1877565.png') no-repeat center fixed;
+  background: url("https://wallpaperaccess.com/full/1877565.png") no-repeat
+    center fixed;
   /* background-image: url(); */
   background-size: cover;
   padding-bottom: 20px;
-  /* background-position: right bottom, left top; */
-  /* background-repeat: no-repeat; */
 }
 
-.intro{
+.intro {
   display: flex;
   flex-direction: column;
   color: white;
@@ -126,10 +149,8 @@ export default {
 }
 
 .title-span {
-  /* background-color: tomato; */
-  margin: 15px;
-  font-size: 1.3rem;
-  font-weight: bold;
+  /* font-size: 1.2rem; */
+  font-weight: 450;
   color: rgb(133, 133, 133);
 }
 
@@ -154,15 +175,9 @@ export default {
   font-weight: bold;
 }
 
-.card-info img {
-  height: 30px;
-  width: 40px;
-}
-
 .time-span {
   border-left: solid 1px rgb(179, 179, 179);
   color: rgb(117, 117, 117);
   /* padding-left: 5px; */
 }
-
 </style>
